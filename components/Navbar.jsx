@@ -3,7 +3,6 @@
 import React from 'react'
 import Link from 'next/link'
 import MobileMenu from './MobileMenu'
-import clsx from 'clsx'
 import { Links } from '@/constant/links'
 import { IoMdPulse } from 'react-icons/io'
 import ThemeToggle from './ThemeToggle'
