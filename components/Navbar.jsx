@@ -6,6 +6,8 @@ import MobileMenu from './MobileMenu'
 import { Links } from '@/constant/links'
 import { IoMdPulse } from 'react-icons/io'
 import ThemeToggle from './ThemeToggle'
+import useMenuActive from '@/hooks/useMenuActive'
+import LinkItem from './LinkItem'
 
 const Navbar = () => {
   return (
@@ -16,15 +18,21 @@ const Navbar = () => {
             <h1 className="font-bold text-gray-900 text-2xl dark:text-white">
               Tech Pulse
             </h1>
-            <IoMdPulse className="text-3xl text-sky-400" aria-hidden="true" />
+            <IoMdPulse className="text-3xl text-sky-500" aria-hidden="true" />
           </div>
         </Link>
         <div className="flex gap-8 max-lg:gap-5 items-center flex-1 max-md:hidden text-gray-600 dark:text-white justify-center">
-          {Links.map((link, index) => (
-            <Link key={index} href={link.route}>
-              {link.label}
-            </Link>
-          ))}
+          {Links.map((link, index) => {
+            const isActive = useMenuActive(link.route)
+            return (
+              <LinkItem
+                key={index}
+                route={link.route}
+                label={link.label}
+                isActive={isActive}
+              />
+            )
+          })}
         </div>
         <div className="flex-1 justify-end flex gap-3 items-center">
           <ThemeToggle />
