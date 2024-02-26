@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         className={`${poppins.className} bg-gray-100 dark:bg-medium overflow-x-hiddens`}
       >
         <Navbar />
-        {children}
+        <div className=" h-screen">{children}</div>
         <Footer />
       </body>
     </html>
