@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero'
 import LatestPost from '@/components/LatestPost'
+import Newsletter from '@/components/Newsletter'
 import React from 'react'
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <>
       <Hero />
       <LatestPost />
+      <Newsletter />
     </>
   )
 }
