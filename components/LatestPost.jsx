@@ -1,6 +1,7 @@
 import React from 'react'
 import { posts } from '@/constant/posts'
 import PostsCard from './PostsCard'
+import Link from 'next/link'
 
 const LatestPost = () => {
   return (
