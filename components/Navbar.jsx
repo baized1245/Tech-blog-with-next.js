@@ -30,6 +30,7 @@ const Navbar = () => {
                 route={link.route}
                 label={link.label}
                 isActive={isActive}
+                footer=""
               />
             )
           })}
